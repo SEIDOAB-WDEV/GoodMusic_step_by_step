@@ -7,37 +7,18 @@
 <!-- Page Album cards -->
 <div class="container px-4 py-4" id="album-cards">
     <div class="d-flex flex-wrap justify-content-between p-5 rounded">
-        <div class="card m-3" style="width: 18rem;">
-            <img src="~/img/jupiter1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a asp-page="/AlbumCarousel" class="btn btn-primary">Go somewhere</a>
+
+        @foreach(var album in @Model.AlbumCards)
+        {
+            <div class="card m-3" style="width: 18rem;">
+                <img src="~/img/@album.ImageUrl" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@album.Title</h5>
+                    <p class="card-text">@album.Description</p>
+                    <a asp-page="/AlbumCarousel" class="btn btn-primary">Go somewhere</a>
+                </div>
             </div>
-        </div>
-        <div class="card m-3" style="width: 18rem;">
-            <img src="~/img/jupiter2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a asp-page="/AlbumCarousel" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class="card m-3" style="width: 18rem;">
-            <img src="~/img/jupiter3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a asp-page="/AlbumCarousel" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class="card m-3" style="width: 18rem;">
-            <img src="~/img/jupiter5.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a asp-page="/AlbumCarousel" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+        }
+
     </div>
 </div>
