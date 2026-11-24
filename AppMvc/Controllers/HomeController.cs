@@ -21,6 +21,16 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult AlbumCards()
+    {
+        return View();
+    }
+
+    public IActionResult AlbumCarousel()
+    {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
